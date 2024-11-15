@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.movie-card {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 150px;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.top-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff57a7;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.movie-info {
+    padding: 10px;
+    text-align: center;
+    background-color: #000;
+}
+
+.movie-info h3 {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
+
+.recently-added {
+    margin-top: 5px;
+    background-color: #ff57a7;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}

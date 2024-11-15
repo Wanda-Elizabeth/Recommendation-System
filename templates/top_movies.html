@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Movies</title>
+    <style>
+        .movie-card {
+            display: inline-block;
+            width: 220px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .movie-card img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Movies</h1>
+    <div id="movies-list">
+        {% for movie in movies %}
+            <div class="movie-card">
+                <img src="{{ movie.imageUrl }}" alt="{{ movie.title }}">
+                <h3>{{ movie.title }}</h3>
+                <p>Rating: {{ movie.rating }}</p>
+                <p>Rank: {{ movie.rank }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
